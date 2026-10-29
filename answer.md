@@ -1,12 +1,12 @@
 # 第2次練習題目-隨堂-QZ2
 >
->學號：1234567 (換成自己的)
+>學號：113111136
 ><br />
->姓名：王小明 (換成自己的)
+>姓名：邱致鑫
 ><br />
->作業撰寫時間：180 (mins，包含程式撰寫時間，換成自己的)
+>作業撰寫時間：100 mins
 ><br />
->最後撰寫文件日期：2023/09/22 (換成自己的)
+>最後撰寫文件日期：2026/10/29 
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -55,10 +55,57 @@ public void mt_getResult(){
 
 1. (需截圖說明，並且需截圖執行結果)
 
-Ans:
+Ans:![alt text](image.png)
+public class PlayerController : MonoBehaviour // 宣告一個公開的 PlayerController 類別，並繼承 MonoBehaviour（讓腳本能掛載到物件上）
+{ // PlayerController 類別的區塊開始
+    
+    // Update is called once per frame
+    void Update() // 宣告 Update 方法，此方法會在遊戲執行時的「每一個影格」被 Unity 自動呼叫一次
+    { // Update 方法的區塊開始
 
+        // 1. 偵測玩家是否按下 W 鍵
+        if (Input.GetKeyDown(KeyCode.W)) // 條件判斷式：Input.GetKeyDown 用於偵測「按鍵被按下那一瞬間」的動作
+        { // 條件成立的區塊開始
+            Debug.Log("玩家按了W鍵！"); // 當按下 W 鍵時，在 Unity 下方主控制台（Console）印出指定訊息
+        } // 條件區塊結束
+    } // Update 方法的區塊結束
+
+} // PlayerController 類別的區塊結束
 2. (需截圖說明，並且需截圖執行結果)
 
-Ans:
+Ans:![alt text](image-1.png)
+using UnityEngine; // 引入 Unity 核心程式庫，讓腳本可以使用 MonoBehaviour 等基礎功能
 
+public class PlayerController : MonoBehaviour // 宣告一個公開的 PlayerController 類別，並繼承 MonoBehaviour（讓腳本能掛載到物件上）
+{ // PlayerController 類別的區塊開始
+    
+    // Update is called once per frame
+    void Update() // 宣告 Update 方法，此方法會在遊戲執行時的「每一個影格」被 Unity 自動呼叫一次
+    { // Update 方法的區塊開始
+
+        // 1. 偵測玩家是否按下 W 鍵
+        if (Input.GetKeyDown(KeyCode.W)) // 條件判斷式：Input.GetKeyDown 用於偵測「按鍵被按下那一瞬間」的動作
+        { // 條件成立的區塊開始
+            Debug.Log("玩家按了W鍵！"); // 當按下 W 鍵時，在 Unity 下方主控制台（Console）印出指定訊息
+        } // 條件區塊結束
+
+        // 2. 偵測 A、S、D 鍵分別用 aKey、sKey、dKey 偵測
+        if (Input.GetKeyDown(KeyCode.A)) // 條件判斷式：偵測 A 鍵是否被按下
+        {
+            Debug.Log("玩家按了A鍵 (aKey)!"); // 按下 A 鍵時印出訊息
+        }
+
+        if (Input.GetKeyDown(KeyCode.S)) // 條件判斷式：偵測 S 鍵是否被按下
+        {
+            Debug.Log("玩家按了S鍵 (sKey)!"); // 按下 S 鍵時印出訊息
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)) // 條件判斷式：偵測 D 鍵是否被按下
+        {
+            Debug.Log("玩家按了D鍵 (dKey)!"); // 按下 D 鍵時印出訊息
+        }
+
+    } // Update 方法的區塊結束
+
+} // PlayerController 類別的區塊結束
 ## 其他
